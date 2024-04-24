@@ -151,6 +151,7 @@ if (BMIMark>BMIJohn){
 }
 
 */
+/*
 // type conversion
 const inputYear = '1991';
 console.log(Number(inputYear), inputYear);
@@ -171,3 +172,27 @@ let n = '1' + 1; // 11이라는 문자열
 n = n - 1; // 11 문자열 - 1 = 숫자형으로 변환, 10
 console.log(n); // n = Number 형식의 10
 // 연산자는 할 수 있는 것들을 한다 타입 강압 -는 숫자 +는 문자형으로 자동으로 변환
+*/
+
+// Boolean True False 🌸
+
+// 5 falsy value: 0, '', undefined, null, NaN
+console.log(Boolean(0)); // F
+console.log(Boolean(undefined)); // F
+console.log(Boolean('Hyun')); // T
+console.log(Boolean({})); // T
+console.log(Boolean('')); // F
+
+const money = 0;
+if(money) {
+    console.log("Don't spend it all ;)");
+} else {
+    console.log("You should get a job!");
+}
+
+let height = 0;
+if(height){
+    console.log('YAY! Height is defined');
+} else {
+    console.log('Height is UNDEFINED');
+}
