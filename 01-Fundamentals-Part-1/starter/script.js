@@ -60,7 +60,7 @@
 // console.log(ageJonas, ageSarah, averageAge);
 
 
-// coading challange #1
+// coading challange #1 ⭐️
 
 // #Test Data 1
 // const massMark = 78;
@@ -82,3 +82,92 @@
 // const markHigherBMI = BMIMark > BMIJohn
 // console.log(markHigherBMI);
 
+// const name = 'hyun';
+// const job = 'student';
+// const birthYear = 2002;
+// const year = 2024
+
+// const hyun = "I'm " + name + ", a " + (year - birthYear) + ' years old ' + job + '!';
+
+// console.log(hyun);
+
+// const hyunNew = `I'm ${name}, a ${year - birthYear} years old ${job}!`
+// console.log(hyunNew);
+
+// console.log(`Just a regular string...`);
+
+// console.log('String with \n\
+// multiple \n\
+// lines');
+
+// console.log(`String
+// multiple
+// lines`)
+
+// const age = 15;
+// // const isOldEnough = age >= 18;
+
+// if(age >= 18) {
+//     console.log('Hyun can start driving license 🚗');
+// } else {
+//     const yearsLeft = 18 - age;
+//     console.log(`Hyun is too young. Wait another ${yearsLeft} years :)`)
+// }
+
+// let century;
+
+// const birthYear = 1991;
+// if(birthYear <= 2000) {
+//     century = 20;
+// } else {
+//     century = 21;
+// }
+
+// console.log(century);
+
+/*
+//coading challenge #2 ⭐️
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / (heightMark * heightMark);
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn);
+
+Write your code below. Good luck! 🙂 
+
+if (BMIMark>BMIJohn){
+    console.log("Mark's BMI is higher than John's!")
+} else {
+    console.log("John's BMI is higher than Mark's!")
+}
+
+if (BMIMark>BMIJohn){
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`)
+} else {
+    console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`)
+}
+
+*/
+// type conversion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Hyun'));
+console.log(typeof NaN); // number
+
+console.log(String(23), 23);
+
+//type coercion
+console.log('I am ' + 23 + ' years old');
+console.log('23' - '10' - 3);
+console.log('23' * '2');
+console.log('23' + '10' - '2');
+
+let n = '1' + 1; // 11이라는 문자열
+n = n - 1; // 11 문자열 - 1 = 숫자형으로 변환, 10
+console.log(n); // n = Number 형식의 10
+// 연산자는 할 수 있는 것들을 한다 타입 강압 -는 숫자 +는 문자형으로 자동으로 변환
