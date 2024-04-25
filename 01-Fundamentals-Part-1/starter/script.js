@@ -177,22 +177,42 @@ console.log(n); // n = Number 형식의 10
 // Boolean True False 🌸
 
 // 5 falsy value: 0, '', undefined, null, NaN
-console.log(Boolean(0)); // F
-console.log(Boolean(undefined)); // F
-console.log(Boolean('Hyun')); // T
-console.log(Boolean({})); // T
-console.log(Boolean('')); // F
+// console.log(Boolean(0)); // F
+// console.log(Boolean(undefined)); // F
+// console.log(Boolean('Hyun')); // T
+// console.log(Boolean({})); // T
+// console.log(Boolean('')); // F
 
-const money = 0;
-if(money) {
-    console.log("Don't spend it all ;)");
+// const money = 0;
+// if(money) {
+//     console.log("Don't spend it all ;)");
+// } else {
+//     console.log("You should get a job!");
+// }
+
+// let height = 0;
+// if(height){
+//     console.log('YAY! Height is defined');
+// } else {
+//     console.log('Height is UNDEFINED');
+// }
+
+const age = '18';
+if (age === 18) console.log('You just became an adult :D (strict)'); // 코드 블럭 하나면 중괄호 생략 가능
+if (age == 18) console.log('You just became an adult :D (loose)'); 
+// == 강압적임 , === 강압적이지 않음
+
+const favorite = Number(prompt("What's your favorite number?"));
+console.log(typeof favorite);
+
+if (favorite === 23) { // '23' == 23
+    console.log('Cool! 23 is an amazing number!')
+} else if (favorite === 7) {
+    console.log('7 is also a cool number!')
+} else if (favorite === 9){
+    console.log('9 is also a cool number!')
 } else {
-    console.log("You should get a job!");
+    console.log('Number is not 23 or 7 or 9')
 }
 
-let height = 0;
-if(height){
-    console.log('YAY! Height is defined');
-} else {
-    console.log('Height is UNDEFINED');
-}
+if(favorite !== 23) console.log('Why not 23?');
