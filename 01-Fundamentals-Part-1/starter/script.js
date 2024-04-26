@@ -197,22 +197,48 @@ console.log(n); // n = Number 형식의 10
 //     console.log('Height is UNDEFINED');
 // }
 
-const age = '18';
-if (age === 18) console.log('You just became an adult :D (strict)'); // 코드 블럭 하나면 중괄호 생략 가능
-if (age == 18) console.log('You just became an adult :D (loose)'); 
-// == 강압적임 , === 강압적이지 않음
+// const age = '18';
+// if (age === 18) console.log('You just became an adult :D (strict)'); // 코드 블럭 하나면 중괄호 생략 가능
+// if (age == 18) console.log('You just became an adult :D (loose)'); 
+// // == 강압적임 , === 강압적이지 않음
 
-const favorite = Number(prompt("What's your favorite number?"));
-console.log(typeof favorite);
+// const favorite = Number(prompt("What's your favorite number?"));
+// console.log(typeof favorite);
 
-if (favorite === 23) { // '23' == 23
-    console.log('Cool! 23 is an amazing number!')
-} else if (favorite === 7) {
-    console.log('7 is also a cool number!')
-} else if (favorite === 9){
-    console.log('9 is also a cool number!')
+// if (favorite === 23) { // '23' == 23
+//     console.log('Cool! 23 is an amazing number!')
+// } else if (favorite === 7) {
+//     console.log('7 is also a cool number!')
+// } else if (favorite === 9){
+//     console.log('9 is also a cool number!')
+// } else {
+//     console.log('Number is not 23 or 7 or 9')
+// }
+
+// if(favorite !== 23) console.log('Why not 23?');
+
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if(shouldDrive) {
+//     console.log('Hyun is able to drive!')
+// } else {
+//     console.log('Someone else should drive...')
+// }
+
+const isTired = false; // C
+console.log(hasDriversLicense || hasGoodVision || isTired);
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+
+if(hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Hyun is able to drive!')
 } else {
-    console.log('Number is not 23 or 7 or 9')
+    console.log('Someone else should drive...')
 }
-
-if(favorite !== 23) console.log('Why not 23?');
