@@ -217,8 +217,8 @@ console.log(n); // n = Number 형식의 10
 
 // if(favorite !== 23) console.log('Why not 23?');
 
-const hasDriversLicense = true; // A
-const hasGoodVision = true; // B
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
 
 // console.log(hasDriversLicense && hasGoodVision);
 // console.log(hasDriversLicense || hasGoodVision);
@@ -232,13 +232,27 @@ const hasGoodVision = true; // B
 //     console.log('Someone else should drive...')
 // }
 
-const isTired = false; // C
-console.log(hasDriversLicense || hasGoodVision || isTired);
-console.log(hasDriversLicense && hasGoodVision && isTired);
+// const isTired = false; // C
+// console.log(hasDriversLicense || hasGoodVision || isTired);
+// console.log(hasDriversLicense && hasGoodVision && isTired);
 
 
-if(hasDriversLicense && hasGoodVision && !isTired) {
-    console.log('Hyun is able to drive!')
+// if(hasDriversLicense && hasGoodVision && !isTired) {
+//     console.log('Hyun is able to drive!')
+// } else {
+//     console.log('Someone else should drive...')
+// }
+
+//coading challenge #3 ⭐️
+/* Write your code below. Good luck! 🙂 */
+
+const scoreDolphins = (96 + 108 + 89) / 3
+const scoreKoalas = (88 + 91 + 110) / 3
+
+if (scoreDolphins > scoreKoalas) {
+    console.log("Dolphins win the trophy")
+} else if (scoreDolphins < scoreKoalas) {
+    console.log("Koalas win the trophy")
 } else {
-    console.log('Someone else should drive...')
+    console.log("Both win the trophy")
 }
