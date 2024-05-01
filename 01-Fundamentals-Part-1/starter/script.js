@@ -297,18 +297,35 @@ console.log(n); // n = Number 형식의 10
 // }
 
 // 삼항 연산자
-const age = 13;
-// age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💧');
+// const age = 13;
+// // age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💧');
 
-const drink = age >= 18 ? 'wine 🍷' : 'water 💧';
-console.log(drink);
+// const drink = age >= 18 ? 'wine 🍷' : 'water 💧';
+// console.log(drink);
 
-let drink2;
-if (age >= 18) {
-    drink2 = 'wine 🍷';
-} else {
-    drink2 = 'water 💧';
-}
-console.log(drink2);
+// let drink2;
+// if (age >= 18) {
+//     drink2 = 'wine 🍷';
+// } else {
+//     drink2 = 'water 💧';
+// }
+// console.log(drink2);
 
-console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
+// console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
+
+// coading challenge #4 ⭐️
+const bill = 275;
+
+/* Write your code below. Good luck! 🙂 */
+
+// 금액이 50~300 사이면 팁 15%를 주는 것(0.15를 곱하기)
+// 금액이 다를 경우 팁은 20% (0.2를 곱하기)
+// 변수 tip을 만들고 삼항 연산자를 사용할 것
+// 청구서 값, 팁, 최종값(청구서 + 팁)이 포함된 문자열을 콘솔에 출력
+// ex. The bill was 275, the tip was 41.25, and the total value 316.25.
+
+let tip
+
+bill >= 50 && bill <= 300 ? tip = bill * 0.15 : tip = bill * 0.2;
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill+tip}.`)
