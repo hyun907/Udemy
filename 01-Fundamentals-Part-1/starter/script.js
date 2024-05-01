@@ -258,40 +258,57 @@ console.log(n); // n = Number 형식의 10
 // }
 
 /* switch와 if 문 */
-const day = 'sunday';
-switch(day) {
-    case 'monday': // day === 'monday'
-        console.log('Plan course structure');
-        console.log('Go to coding meetup');
-        break;
-    case 'tuesday':
-        console.log('Prepare videos');
-        break;
-    case 'wednesday':
-    case 'thursday':
-        console.log('Write code examples');
-        break;
-    case 'friday':
-        console.log('Record videos');
-        break;
-    case 'saturday':
-    case 'sunday':
-        console.log('Enjoy the weekend :D');
-        break
-    default:
-        console.log('Not a valid day!');
-}
+// const day = 'sunday';
+// switch(day) {
+//     case 'monday': // day === 'monday'
+//         console.log('Plan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'tuesday':
+//         console.log('Prepare videos');
+//         break;
+//     case 'wednesday':
+//     case 'thursday':
+//         console.log('Write code examples');
+//         break;
+//     case 'friday':
+//         console.log('Record videos');
+//         break;
+//     case 'saturday':
+//     case 'sunday':
+//         console.log('Enjoy the weekend :D');
+//         break
+//     default:
+//         console.log('Not a valid day!');
+// }
 
-if(day === 'monday'){
-    console.log('Plan and Go coding');
-} else if(day === 'tuesday'){
-    console.log('Prepare videos');
-} else if(day === 'wednesday' || day === 'thursday'){
-    console.log('Write code examples');
-} else if(day === 'friday'){
-    console.log('Record videos');
-} else if(day === 'saturday' || day === 'sunday'){
-    console.log('Enjoy the weekend :D');
+// if(day === 'monday'){
+//     console.log('Plan and Go coding');
+// } else if(day === 'tuesday'){
+//     console.log('Prepare videos');
+// } else if(day === 'wednesday' || day === 'thursday'){
+//     console.log('Write code examples');
+// } else if(day === 'friday'){
+//     console.log('Record videos');
+// } else if(day === 'saturday' || day === 'sunday'){
+//     console.log('Enjoy the weekend :D');
+// } else {
+//     console.log('Not a valid day!');
+// }
+
+// 삼항 연산자
+const age = 13;
+// age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💧');
+
+const drink = age >= 18 ? 'wine 🍷' : 'water 💧';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+    drink2 = 'wine 🍷';
 } else {
-    console.log('Not a valid day!');
+    drink2 = 'water 💧';
 }
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
