@@ -314,7 +314,7 @@ console.log(n); // n = Number 형식의 10
 // console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
 
 // coading challenge #4 ⭐️
-const bill = 275;
+// const bill = 275;
 
 /* Write your code below. Good luck! 🙂 */
 
@@ -324,8 +324,8 @@ const bill = 275;
 // 청구서 값, 팁, 최종값(청구서 + 팁)이 포함된 문자열을 콘솔에 출력
 // ex. The bill was 275, the tip was 41.25, and the total value 316.25.
 
-let tip
+// let tip;
 
-bill >= 50 && bill <= 300 ? tip = bill * 0.15 : tip = bill * 0.2;
+// bill >= 50 && bill <= 300 ? tip = bill * 0.15 : tip = bill * 0.2;
 
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill+tip}.`)
+// console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill+tip}.`);
