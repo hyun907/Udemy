@@ -53,3 +53,18 @@ console.log(age1, age2);
 // 함수는 값이라 변수에 저장할 수 있다
 // 함수 선언은 호이스팅 프로세스 때문에 먼저 호출할 수 있다
 // 익명함수는 함수식 이전에 호출할 수 없다
+
+// 화살표 함수
+
+const calcAge3 = birthYear => 2037 - birthYear;
+const age3 = calcAge3(1991);
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    // return retirement;
+    return `${firstName} retires in ${retirement} years`;
+}
+
+console.log(yearsUntilRetirement(1991, 'Hyun'));
