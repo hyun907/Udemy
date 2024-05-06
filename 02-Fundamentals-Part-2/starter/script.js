@@ -89,6 +89,7 @@ console.log(yearsUntilRetirement(1991, 'Hyun'));
 
 // console.log(fruitProcessor(2, 3));
 
+/*
 const calcAge = function(birthYear) {
     return 2037 - birthYear;
 }
@@ -109,3 +110,31 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 }
 console.log(yearsUntilRetirement(1991, 'Hyun'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
+*/
+
+///////////////////////////////////////
+// Coding Challenge #1
+/* Write your code below. Good luck! 🙂 */
+// DATA 1
+const calcAverage = (first, second, third) => (first + second + third)/3;
+
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
+        return console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        return console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
+    } else {
+        return console.log(`No team wins...`);
+    }
+}
+
+checkWinner(scoreDolphins, scoreKoalas);
+
+// DATA 2
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+
+checkWinner(scoreDolphins, scoreKoalas);
