@@ -181,34 +181,55 @@ console.log(yearsUntilRetirement(1950, 'Mike'));
 
 // Basic Array Operations (Method) ⭐️
 
-const friends = ['Michael', 'Steven', 'Peter'];
+// const friends = ['Michael', 'Steven', 'Peter'];
 
 // Add elements
-const newLength = friends.push('Jay');
-console.log(friends);
-console.log(newLength);
+// const newLength = friends.push('Jay');
+// console.log(friends);
+// console.log(newLength);
 
-friends.unshift('John');
-console.log(friends);
+// friends.unshift('John');
+// console.log(friends);
 
 // Remove elements
-friends.pop(); // Last
-const popped = friends.pop(); // Last
-console.log(friends);
-console.log(popped);
+// friends.pop(); // Last
+// const popped = friends.pop(); // Last
+// console.log(friends);
+// console.log(popped);
 
-friends.shift(); // First
-console.log(friends);
+// friends.shift(); // First
+// console.log(friends);
 
-console.log(friends.indexOf('Steven'));
-console.log(friends.indexOf('Bob'));
+// console.log(friends.indexOf('Steven'));
+// console.log(friends.indexOf('Bob'));
 
-friends.push(23);
-console.log(friends.includes('Steven'));
-console.log(friends.includes('Bob'));
-console.log(friends.includes('23'));
-console.log(friends.includes(23));
+// friends.push(23);
+// console.log(friends.includes('Steven'));
+// console.log(friends.includes('Bob'));
+// console.log(friends.includes('23'));
+// console.log(friends.includes(23));
 
-if (friends.includes('Steven')) {
-    console.log('You have a friend called Steven');
+// if (friends.includes('Steven')) {
+//     console.log('You have a friend called Steven');
+// }
+
+///////////////////////////////////////
+// Coding Challenge #2
+/* Write your code below. Good luck! 🙂 */
+
+// const a = function(b) {
+//     return b >= 50 && b <= 300 ? b * 0.15 : b * 0.2;
+// }
+
+const calcTip = function(total) {
+    if (total > 50 && total < 300) {
+        return total * 0.15;
+    } else {
+        return total * 0.2;
+    }
 }
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const total = [bills[0] + tips[0], bills[1] + tips[1], tips[2] + bills[2]];
+console.log(bills, tips, total);
