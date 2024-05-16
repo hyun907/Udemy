@@ -290,13 +290,13 @@ console.log(yearsUntilRetirement(1950, 'Mike'));
 // console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`)
 
 // Object Method
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    birthYear: 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    hasDriversLicense: true,
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYear: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriversLicense: true,
 
     // calcAge: function(birthYear) {
     //     return 2037 - birthYear;
@@ -307,17 +307,17 @@ const jonas = {
     //     return 2037 - this.birthYear;
     // }
 
-    calcAge: function() {
-        this.age = 2037 - this.birthYear;
-        return this.age;
-    },
+//     calcAge: function() {
+//         this.age = 2037 - this.birthYear;
+//         return this.age;
+//     },
 
 
-    getSummary: function() {
-        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
-    }
+//     getSummary: function() {
+//         return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+//     }
     
-};
+// };
 
 
 // console.log(jonas['calcAge'](1991));
@@ -326,4 +326,37 @@ const jonas = {
 // Challenge
 // "Jonas is a 46-year old teacher, and he has a driver's license"
 
-console.log(jonas.getSummary());
+// console.log(jonas.getSummary());
+
+///////////////////////////
+// Coding Challenge #3
+/* Write your code below. Good luck! 🙂 */
+
+// BMI = mass / (height * height)
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function(){
+        this.bmi = this.mass / (this.height * this.height)
+        return this.bmi;
+    }
+}
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function(){
+    this.bmi = this.mass / (this.height * this.height)
+    return this.bmi;
+    }
+}
+mark.calcBMI();
+john.calcBMI();
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})`)
+} else {
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`)
+}
