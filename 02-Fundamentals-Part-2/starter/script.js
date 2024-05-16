@@ -221,15 +221,35 @@ console.log(yearsUntilRetirement(1950, 'Mike'));
 //     return b >= 50 && b <= 300 ? b * 0.15 : b * 0.2;
 // }
 
-const calcTip = function(total) {
-    if (total > 50 && total < 300) {
-        return total * 0.15;
-    } else {
-        return total * 0.2;
-    }
-}
+// const calcTip = function(total) {
+//     if (total > 50 && total < 300) {
+//         return total * 0.15;
+//     } else {
+//         return total * 0.2;
+//     }
+// }
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-const total = [bills[0] + tips[0], bills[1] + tips[1], tips[2] + bills[2]];
-console.log(bills, tips, total);
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const total = [bills[0] + tips[0], bills[1] + tips[1], tips[2] + bills[2]];
+// console.log(bills, tips, total);
+
+// Object
+
+const jonasArray = [
+    'Jonas',
+    'Schemdtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+// key : value
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+};
+// 5 프로퍼티 (속성)을 가짐
