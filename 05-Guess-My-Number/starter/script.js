@@ -20,10 +20,19 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
 
+  // input 값이 없을 때
   if (!guess) {
     document.querySelector('.message').textContent = '⛔️ No number!';
+
+    // 플레이어가 숫자를 맞췄을 때
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
+
+    document.querySelector('body').style.backgroundColor = '#60b347';
+
+    document.querySelector('.number').style.width = '30rem';
+
+    // 숫자가 높을 때
   } else if (guess > secretNumber) {
     if (score > 0) {
       document.querySelector('.message').textContent = '📈 Too high!';
@@ -33,6 +42,8 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = '💥 You lost the game';
       document.querySelector('.score').textContent = 0;
     }
+
+    // 숫자가 낮을 때
   } else if (guess < secretNumber) {
     if (score > 0) {
       document.querySelector('.message').textContent = '📉 Too low!';
