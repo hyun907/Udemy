@@ -22,28 +22,61 @@ diceEl.classList.add('hidden');
 const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
+let playing = true;
+
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+};
 
 // Rolling dice Functionality
 btnRoll.addEventListener('click', function () {
-  // 1. 무작위 주사위 굴리기
-  const dice = Math.trunc(Math.random() * 6) + 1;
+  if (playing) {
+    // 1. 무작위 주사위 굴리기
+    const dice = Math.trunc(Math.random() * 6) + 1;
 
-  // 2. 주사위 표시하기
-  diceEl.classList.remove('hidden');
-  diceEl.src = `dice-${dice}.png`;
+    // 2. 주사위 표시하기
+    diceEl.classList.remove('hidden');
+    diceEl.src = `dice-${dice}.png`;
 
-  // 3. 1로 굴리는 걸 확인하기 참이면 다음 플레이어로
-  if (dice !== 1) {
-    // 주사위를 현재 점수에 추가
-    currentScore += dice;
-    document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore;
-  } else {
-    // 다음 플레이어로
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    currentScore = 0;
-    activePlayer = activePlayer === 0 ? 1 : 0;
-    player0El.classList.toggle('player--active');
-    player1El.classList.toggle('player--active');
+    // 3. 1로 굴리는 걸 확인하기 참이면 다음 플레이어로
+    if (dice !== 1) {
+      // 주사위를 현재 점수에 추가
+      currentScore += dice;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
+    } else {
+      // 다음 플레이어로
+      switchPlayer();
+    }
+  }
+});
+
+btnHold.addEventListener('click', function () {
+  if (playing) {
+    // 1.현재 점수와 현재 플레이어의 점수를 계산하기
+    scores[activePlayer] += currentScore;
+
+    document.getElementById(`score--${activePlayer}`).textContent =
+      scores[activePlayer];
+
+    // 2. if 플레이어의 점수 > = 100 이라면 끝내기
+    if (scores[activePlayer] >= 100) {
+      playing = false;
+      diceEl.classList.add('hidden');
+
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player--active');
+    } else {
+      // 아니면 다음 플레이어로
+      switchPlayer();
+    }
   }
 });
