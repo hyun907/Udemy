@@ -64,7 +64,7 @@ btnHold.addEventListener('click', function () {
       scores[activePlayer];
 
     // 2. if 플레이어의 점수 > = 100 이라면 끝내기
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 10) {
       playing = false;
       diceEl.classList.add('hidden');
 
@@ -79,4 +79,43 @@ btnHold.addEventListener('click', function () {
       switchPlayer();
     }
   }
+});
+
+// 초기화
+btnNew.addEventListener('click', function () {
+  // 현재 플레이어가 승리했을 때
+  if (scores[activePlayer] >= 10) {
+
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.remove('player--winner');
+
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.add('player--active');
+  } 
+
+  // 스코어 초기화
+  scores[0] = 0;
+  scores[1] = 0;
+
+  playing = true;
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+
+  diceEl.classList.add('hidden');
+
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+
+  if (activePlayer === 1) {
+    document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove('player--active');
+    
+    document.querySelector('.player--0').classList.add('player--active');
+  }
+
+  activePlayer = 0;
+  
 });
